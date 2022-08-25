@@ -218,28 +218,5 @@ select * from personel where id IN ('1001','1002','1004');
 --SORU: maasi sadece 70000, 100000 olan personeli listele
 select * from personel where maas IN(70000,100000);
 
-/*
-SELECT - LIKE kosulu
 
-LIKE : Sorgulama yaparken belirli kalip ifadeleri kullanabilmemizi saglar
-ILIKE : Sorgulama yaparken buyuk/kucuk harfe duyarsiz olarak eslesir
-
-LIKE : ~~
-ILIKE : ~~*
-
-NOT LIKE : !~~
-NOT ILIKE : !~~*
-
-% --> 0 veya daha fazla karakteri belirtir
-_ --> tek bir karakteri belirtir
-*/
-
---SORU: ismi A harfi ile baslayan personeli listele
-select * from personel where isim LIKE 'A%';
-
---SORU: ismi t harfi ile biten personeli listele
-select * from personel where isim LIKE '%t';
-
---SORU: isminin ikinci harfi e olan personeli listele
-select * from personel where isim LIKE '_e%';
 
