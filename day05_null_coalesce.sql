@@ -28,3 +28,32 @@ select * from insanlar;
 -- ismi null olanlari sorgula
 select * from insanlar
 where isim is null;
+
+-- null olmayanları listeleyelim
+select * from insanlar WHERE isim is not null
+
+-- isim 'i NULL olan kişilerin isim'ine NO NAME atayınız.
+UPDATE insanlar
+SET isim = 'NO NAME'
+WHERE isim is null
+
+-- Tabloyu bir önceki soruyu çözmeden önceki haline geri getirin
+UPDATE insanlar
+SET isim = null
+WHERE isim = 'NO NAME'
+
+--NOT : Çoklu değişimde her değişim için SET ... WHERE isim IS NULL gibi 
+--ifade yazmamak için COALESCE(Birleştirme) kullanılır 
+
+/* 
+isim 'i NULL olanlara 'Henuz isim girilmedi'
+adres 'i NULL olanlara 'Henuz adres girilmedi'
+ssn 'i NULL olanlara ' no ssn' atayalım.
+*/
+
+UPDATE insanlar
+SET isim = coalesce (isim, 'HENUZ ISIM GIRILMEDI'),
+    adres = coalesce (adres, 'HUNUZ ADRES GIRILMEDI'),
+    ssn = coalesce (ssn, 'NO SSN');
+    
+select * from insanlar    
