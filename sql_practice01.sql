@@ -8,7 +8,7 @@ create table personel                                                           
 	email varchar(30)                                                                             
 );                                                                                            
                                                                                               
--- auto_increment kullandığımızda otomatik olarak id ler 1 den başlayacaktır.                 
+-- auto_increment(serial) kullandığımızda otomatik olarak id ler 1 den başlayacaktır.                 
 insert into personel (isim, yas, maas, email) values ('Ali', 39, 12500, 'ali@gmail.com');
 insert into personel (isim, yas, maas, email) values ('Derya', 28, 15000, 'derya@yahoo.com');
 insert into personel (isim, yas, maas, email) values ('Sevim', 24, 25000, 'sevim@hotmail.com');

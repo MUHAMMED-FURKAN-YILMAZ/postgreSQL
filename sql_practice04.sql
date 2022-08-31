@@ -33,8 +33,7 @@ select * from markalar;
 -- SORU1: calisan sayisi 15.000’den cok olan markalarin isimlerini ve bu
 -- markada calisanlarin isimlerini ve maaşlarini listeleyin.
 select isim , maas , isyeri from calisanlar 
-where isyeri 
-in(select marka_isim from markalar where calisan_sayisi>15000)         -- baglanti noktasi
+where isyeri in(select marka_isim from markalar where calisan_sayisi>15000);         -- baglanti noktasi
 -- in kulanacaksanin parantez icine aldiginiz sorgu birden fazla deger dondermeleir
 
 select * from calisanlar;--  tablos icin birlesme isyeri sutunu

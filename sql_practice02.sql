@@ -17,7 +17,7 @@ select * from workers;
 -- 1 Tabloya company_industry isminde sütun ekleyiniz
 alter table workers add company_industry varchar(20);
 
--- TABLOYA worker_address sütunu ve defaullt olarakta 'Miami, FL, USA' adresini ekleyiniz.
+-- TABLOYA worker_address sütunu ve default olarakta 'Miami, FL, USA' adresini ekleyiniz.
 alter table workers add worker_address varchar(100) default 'Miami , fl,usa';
 
 select * from workers;
